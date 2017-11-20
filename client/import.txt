@@ -1,0 +1,372 @@
+myapp = new Mongo.Collection('reso');                                                  // CREATING COLLECTIONS
+mystudent = new Mongo.Collection('student');
+theuser = new Mongo.Collection('latest');
+thestudent=new Mongo.Collection('thestudent');
+studenttab=new Mongo.Collection('studenttab');
+cgpa=new Mongo.Collection('cgpa');
+current=new Mongo.Collection('current');
+Template.body.helpers({
+      reso: function()
+      {       
+        return myapp.find();
+      }
+});
+Template.body.helpers({
+      current: function()
+      {       
+        return current.find();
+      }
+});
+Template.body.helpers({
+      student: function()
+      {       
+        return mystudent.find();
+      }
+});
+Template.body.helpers({
+      latest: function()
+      {       
+        return theuser.find();
+      }
+});
+Template.body.helpers({
+      thestudent: function()
+      {       
+        return thestudent.find();
+      }
+});
+Template.body.helpers({
+      studenttab: function()
+      {       
+        return studenttab.find();
+      }
+});
+Template.body.helpers({
+      cgpa: function()
+      {       
+        return cgpa.find();
+      }
+});
+
+mydata = new Mongo.Collection('mydata'); 
+Template.body.helpers({
+      mydata: function()
+      {       
+        return mydata.find();
+      }
+});
+
+
+                                      // 141363**************                   
+studenttab.insert({enroll:"141363",subject:"a1",subjectname:"Mathematics 1",marks:[10,20,20]});
+studenttab.insert({enroll:"141363",subject:"a2",subjectname:"Physics 1 ",marks:[10,21,20]});
+studenttab.insert({enroll:"141363",subject:"a3",subjectname:"Electircal Circuit",marks:[10,19,21]});
+studenttab.insert({enroll:"141363",subject:"a4",subjectname:"C Programming",marks:[15,18,10]});
+studenttab.insert({enroll:"141363",subject:"b1",subjectname:"Mathematics 2",marks:[9,15,12]});
+studenttab.insert({enroll:"141363",subject:"b2",subjectname:"Physics 2",marks:[8,20,15]});
+studenttab.insert({enroll:"141363",subject:"b3",subjectname:"DS",marks:[7,21,30]});
+studenttab.insert({enroll:"141363",subject:"b4",subjectname:"GCP",marks:[6,14,29]});
+studenttab.insert({enroll:"141363",subject:"c1",subjectname:"Environemtal",marks:[8,11,28]});
+studenttab.insert({enroll:"141363",subject:"c2",subjectname:"OOPs",marks:[9,12,26]});
+studenttab.insert({enroll:"141363",subject:"c3",subjectname:"Algorithm",marks:[10,13,27]});
+studenttab.insert({enroll:"141363",subject:"c4",subjectname:"Digital Electronics",marks:[11,14,15]});
+
+                                    //141364 
+studenttab.insert({enroll:"141364",subject:"a1",subjectname:"Mathematics 1",marks:[10,20,15]});
+studenttab.insert({enroll:"141364",subject:"a2",subjectname:"Physics 1 ",marks:[11,21,16]});
+studenttab.insert({enroll:"141364",subject:"a3",subjectname:"Electircal Circuit",marks:[12,22,17]});
+studenttab.insert({enroll:"141364",subject:"a4",subjectname:"C Programming",marks:[13,23,18]});
+studenttab.insert({enroll:"141364",subject:"b1",subjectname:"Mathematics 2",marks:[14,24,19]});
+studenttab.insert({enroll:"141364",subject:"b2",subjectname:"Physics 2",marks:[15,18,20]});
+studenttab.insert({enroll:"141364",subject:"b3",subjectname:"DS",marks:[9,15,21]});
+studenttab.insert({enroll:"141364",subject:"b4",subjectname:"GCP",marks:[8,14,22]});
+studenttab.insert({enroll:"141364",subject:"c1",subjectname:"Environemtal",marks:[7,13,23]});
+studenttab.insert({enroll:"141364",subject:"c2",subjectname:"OOPs",marks:[6,12,24]});
+studenttab.insert({enroll:"141364",subject:"c3",subjectname:"Algorithm",marks:[5,11,25]});
+studenttab.insert({enroll:"141364",subject:"c4",subjectname:"Digital Electronics",marks:[4,10,26]});
+
+                                  //141365
+studenttab.insert({enroll:"141365",subject:"a1",subjectname:"Mathematics 1",marks:[11,18,15]});
+studenttab.insert({enroll:"141365",subject:"a2",subjectname:"Physics 1 ",marks:[12,17,14]});
+studenttab.insert({enroll:"141365",subject:"a3",subjectname:"Electircal Circuit",marks:[13,16,13]});
+studenttab.insert({enroll:"141365",subject:"a4",subjectname:"C Programming",marks:[14,15,12]});
+studenttab.insert({enroll:"141365",subject:"b1",subjectname:"Mathematics 2",marks:[15,17,11]});
+studenttab.insert({enroll:"141365",subject:"b2",subjectname:"Physics 2",marks:[10,19,10]});
+studenttab.insert({enroll:"141365",subject:"b3",subjectname:"DS",marks:[11,19,10]});
+studenttab.insert({enroll:"141365",subject:"b4",subjectname:"GCP",marks:[12,21,8]});
+studenttab.insert({enroll:"141365",subject:"c1",subjectname:"Environemtal",marks:[13,22,7]});
+studenttab.insert({enroll:"141365",subject:"c2",subjectname:"OOPs",marks:[14,23,6]});
+studenttab.insert({enroll:"141365",subject:"c3",subjectname:"Algorithm",marks:[15,24,5]});
+studenttab.insert({enroll:"141365",subject:"c4",subjectname:"Digital Electronics",marks:[16,25,4]});
+
+                                        //141366
+studenttab.insert({enroll:"141366",subject:"a1",subjectname:"Mathematics 1",marks:[10,20,15]});
+studenttab.insert({enroll:"141366",subject:"a2",subjectname:"Physics 1 ",marks:[11,21,16]});
+studenttab.insert({enroll:"141366",subject:"a3",subjectname:"Electircal Circuit",marks:[12,22,17]});
+studenttab.insert({enroll:"141366",subject:"a4",subjectname:"C Programming",marks:[13,23,18]});
+studenttab.insert({enroll:"141364",subject:"b1",subjectname:"Mathematics 2",marks:[14,24,19]});
+studenttab.insert({enroll:"141364",subject:"b2",subjectname:"Physics 2",marks:[15,18,20]});
+studenttab.insert({enroll:"141364",subject:"b3",subjectname:"DS",marks:[9,15,21]});
+studenttab.insert({enroll:"141364",subject:"b4",subjectname:"GCP",marks:[8,14,22]});
+studenttab.insert({enroll:"141364",subject:"c1",subjectname:"Environemtal",marks:[7,13,23]});
+studenttab.insert({enroll:"141364",subject:"c2",subjectname:"OOPs",marks:[6,12,24]});
+studenttab.insert({enroll:"141364",subject:"c3",subjectname:"Algorithm",marks:[5,11,25]});
+studenttab.insert({enroll:"141364",subject:"c4",subjectname:"Digital Electronics",marks:[4,10,26]});
+
+
+//*****************************************CGPA**********************************
+cgpa.insert({enroll:"141363",pointer:[7.1,6.2,6.7,6.3]});
+cgpa.insert({enroll:"141364",pointer:[9.1,8.2,7.7,7.3]});
+cgpa.insert({enroll:"141365",pointer:[9.1,8.2,8.7,8.3]});
+cgpa.insert({enroll:"141366",pointer:[8.1,7.2,7.7,6.3]});
+cgpa.insert({enroll:"141367",pointer:[7.1,7.2,7.7,7.3]});
+cgpa.insert({enroll:"141368",pointer:[9.1,9.2,8.7,8.3]});
+
+
+                            
+current.insert({name:"currentuser",enroll:"141363"});
+console.log(current.findOne());
+
+                                                                                          //   DEFAULT PAGE
+Session.setDefault('page', 'home');
+
+ UI.body.helpers({
+        isPage: function(page){
+            return Session.equals('page', page)
+        }
+    })
+var userid="141";
+UI.body.events({
+        'click .clickChangesPage': function(event, template){
+          if(event.currentTarget.getAttribute('data-page')=='about')
+          { 
+            var enroll = $('.enroll').val();
+            var pswd = $('.pswd').val();
+            userid= enroll;
+                                                                                       //   AUTHENTICATION
+                     if(enroll=="141363" && pswd=="141363")
+                {
+                     //cuser= true;
+                      
+                    userid= enroll;
+                     // alert(userid);
+                      
+                     Session.set('page', event.currentTarget.getAttribute('data-page'));
+                     current.update({_id:"o59NJo9XGaSBBWddr"},{$set:{enroll:userid}});
+                      
+                    // console.log(current.findOne());
+
+                }
+                   if(enroll=="141364" && pswd=="141364")
+                {
+                     //cuser= true;
+                     userid= enroll;
+                     // alert(userid);
+
+                     Session.set('page', event.currentTarget.getAttribute('data-page'));
+                     current.update({_id:"o59NJo9XGaSBBWddr"},{$set:{enroll:userid}});
+                    //event.thename.setText("141363");
+                    //namethe.setText("hello");
+                    
+                }
+                   if(enroll=="141365" && pswd=="141365")
+                {   
+                     //cuser= true;
+                     userid= enroll;
+                     // alert(userid);
+                    
+                     Session.set('page', event.currentTarget.getAttribute('data-page'));
+                    current.update({_id:"o59NJo9XGaSBBWddr"},{$set:{enroll:userid}});
+                    //event.thename.setText("141363");
+                    //namethe.setText("hello");
+                      
+                }
+                   if(enroll=="141366" && pswd=="141366")
+                {
+                     //cuser= true;
+                      
+                    userid= enroll;
+                     // alert(userid);
+                      
+                     Session.set('page', event.currentTarget.getAttribute('data-page'));
+                     current.update({_id:"o59NJo9XGaSBBWddr"},{$set:{enroll:userid}});
+                      
+                    // console.log(current.findOne());
+
+                }
+                   if(enroll=="141367" && pswd=="141367")
+                {
+                     //cuser= true;
+                      
+                    userid= enroll;
+                     // alert(userid);
+                      
+                     Session.set('page', event.currentTarget.getAttribute('data-page'));
+                     current.update({_id:"o59NJo9XGaSBBWddr"},{$set:{enroll:userid}});
+                      
+                    // console.log(current.findOne());
+
+                }
+                   if(enroll=="141368" && pswd=="141368")
+                {
+                     //cuser= true;
+                      
+                    userid= enroll;
+                     // alert(userid);
+                      
+                     Session.set('page', event.currentTarget.getAttribute('data-page'));
+                     current.update({_id:"o59NJo9XGaSBBWddr"},{$set:{enroll:userid}});
+                      
+                    // console.log(current.findOne());
+
+                }
+                   if(enroll=="t1" && pswd=="t1")
+                {
+                     //cuser= true;
+                      
+                    userid= enroll;
+                     // alert(userid);
+                      
+                     Session.set('page', event.currentTarget.getAttribute('data-page'));
+                     current.update({_id:"o59NJo9XGaSBBWddr"},{$set:{enroll:userid}});
+                      
+                    // console.log(current.findOne());
+
+                }
+                   if(enroll=="t2" && pswd=="t2")
+                {
+                     //cuser= true;
+                      
+                    userid= enroll;
+                     // alert(userid);
+                      
+                     Session.set('page', event.currentTarget.getAttribute('data-page'));
+                     current.update({_id:"o59NJo9XGaSBBWddr"},{$set:{enroll:userid}});
+                      
+                    // console.log(current.findOne());
+
+                }
+
+                else
+                {
+                     // cuser= false;
+                     alert('INCORECT UserId or Password');
+
+                }
+
+            
+          }
+          else
+          {
+               Session.set('page', event.currentTarget.getAttribute('data-page'));
+          }
+          
+        }
+    });
+
+
+
+
+
+                                                             //   Dashboard Changes
+Template.about.myname = function() {
+    var myname = "Hello "+userid; 
+     console.log(myname);
+    return myname;
+}
+
+
+
+
+                                                                                             // GRAPHS
+var vikhyat=current.findOne().enroll ;
+console.log(vikhyat);
+var ab1,ab2,ab3,ab4;
+if(vikhyat!="141")
+{
+  ab1=cgpa.findOne({enroll: vikhyat},{pointer:1,_id:0}).pointer[0];
+ ab2=cgpa.findOne({enroll:vikhyat},{pointer:1,_id:0}).pointer[1];
+ ab3=cgpa.findOne({enroll:vikhyat},{pointer:1,_id:0}).pointer[2];
+ ab4=cgpa.findOne({enroll:vikhyat},{pointer:1,_id:0}).pointer[3];
+
+
+var newdata =[ab1,ab2,ab3,ab4];
+
+console.log(newdata);
+}
+
+mydata.insert({name:"hello2",data:[7.1,6.2,6.7,6.3,6.7,7.3,7.5,7.6]});
+mydata.insert({name:"hello3",data:[90,91,25,32,45]});
+
+
+
+
+// from chart2   application
+
+Template.chart.onCreated(function() {
+  chart1 = this.subscribe('chart1');
+  
+});
+
+Template.theorychart.onCreated(function() {
+  chart2 = this.subscribe('chart2');
+  
+});
+
+
+drawchart = function(datavalues)
+{
+
+     var data = 
+     {
+        labels:[ "Semester 1", "Semester 2", "Semester 3", "Semester 4", "Semester 5", "Semester 6", "Semester 7", "Semester 8"],
+       datasets:
+     [
+        {   
+
+            label: "My First dataset",
+            fillColor: "rgba(0,128,43,0.3)",
+            strokeColor: "rgba(26,255,102,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: newdata            
+        },   
+    ]   
+    }; 
+ 
+
+
+   var ctx = $("#myChart").get(0).getContext("2d");
+    new Chart(ctx).Line(data);
+    var ctx2 = $("#mytheorychart").get(0).getContext("2d");
+    new Chart(ctx2).Line(data);
+};
+
+
+
+
+Template.chart.rendered = function()
+{
+      
+      Tracker.autorun(function ()
+       {
+          if (chart1.ready()) 
+          {
+                var budgetdata = mydata.find({'name':'chart1'});
+               
+                var datavalues=[];
+                var datalabels=["Semester1", "Semester1", "Semester2", "Semester3", "Semester4", "Semester5", "Semester6", "Semester7", "Semester8"];
+                budgetdata.forEach(function(option) {
+                   
+                    datavalues.push(option.t1);
+                    
+                });
+             
+                drawchart(datavalues,datalabels);
+         }   
+    
+       });
+
+};

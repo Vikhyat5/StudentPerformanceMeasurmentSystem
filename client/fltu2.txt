@@ -1,0 +1,91 @@
+var vikhyat=current.findOne().enroll ;
+console.log(vikhyat);
+var ab1,ab2,ab3,ab4;
+if(vikhyat!="141")
+{
+  ab1=cgpa.findOne({enroll: vikhyat},{pointer:1,_id:0}).pointer[0];
+ ab2=cgpa.findOne({enroll:vikhyat},{pointer:1,_id:0}).pointer[1];
+ ab3=cgpa.findOne({enroll:vikhyat},{pointer:1,_id:0}).pointer[2];
+ ab4=cgpa.findOne({enroll:vikhyat},{pointer:1,_id:0}).pointer[3];
+
+
+var newdata =[ab1,ab2,ab3,ab4];
+
+console.log(newdata);
+}
+
+mydata.insert({name:"hello2",data:[7.1,6.2,6.7,6.3,6.7,7.3,7.5,7.6]});
+mydata.insert({name:"hello3",data:[90,91,25,32,45]});
+
+
+
+
+// from chart2   application
+
+Template.chart.onCreated(function() {
+  chart1 = this.subscribe('chart1');
+  
+});
+
+Template.theorychart.onCreated(function() {
+  chart2 = this.subscribe('chart2');
+  
+});
+
+
+drawchart = function(datavalues)
+{
+
+     var data = 
+     {
+        labels:[ "Semester 1", "Semester 2", "Semester 3", "Semester 4", "Semester 5", "Semester 6", "Semester 7", "Semester 8"],
+       datasets:
+     [
+        {   
+
+            label: "My First dataset",
+            fillColor: "rgba(0,128,43,0.3)",
+            strokeColor: "rgba(26,255,102,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: newdata            
+        },   
+    ]   
+    }; 
+ 
+
+
+   var ctx = $("#myChart").get(0).getContext("2d");
+    new Chart(ctx).Line(data);
+    var ctx2 = $("#mytheorychart").get(0).getContext("2d");
+    new Chart(ctx2).Line(data);
+};
+
+
+
+
+Template.chart.rendered = function()
+{
+      
+      Tracker.autorun(function ()
+       {
+          if (chart1.ready()) 
+          {
+                var budgetdata = mydata.find({'name':'chart1'});
+               
+                var datavalues=[];
+                var datalabels=["Semester1", "Semester1", "Semester2", "Semester3", "Semester4", "Semester5", "Semester6", "Semester7", "Semester8"];
+                budgetdata.forEach(function(option) {
+                   
+                    datavalues.push(option.t1);
+                    
+                });
+             
+                drawchart(datavalues,datalabels);
+         }   
+    
+       });
+
+};

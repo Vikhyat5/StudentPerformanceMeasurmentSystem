@@ -1,0 +1,864 @@
+<head>
+  <title>test2</title>
+</head>
+
+<body>
+  
+
+
+{{#if isPage 'home'}}
+        {{> home}}
+    {{/if}}
+    {{#if isPage 'about'}}
+        {{> about}}
+    {{/if}}
+    {{#if isPage 'explore'}}
+        {{> explore}}
+    {{/if}}
+
+    {{#if isPage 'messages'}}
+        {{> messages}}
+         {{#each messageapp}}
+       {{>messagebox}}
+   {{/each}}
+    {{/if}}
+
+    {{#if isPage 'compare'}}
+        {{> compare}}
+    {{/if}}
+
+    {{#if isPage 'predict'}}
+        {{> predict}}
+    {{/if}}
+
+    {{#if isPage 'work'}}
+        {{> work}}
+    {{/if}}
+
+    {{#if isPage 'aboutnew'}}
+        {{> aboutnew}}
+    {{/if}}
+   
+     {{#if isPage 'Personal'}}
+        {{> Personal}}
+    {{/if}}
+
+    {{#if isPage 'resume'}}
+        {{> resume}}
+    {{/if}}
+   
+
+
+</body>
+
+
+<template name="home">
+ 
+   <div class="container-fluid" style="padding:0px;">
+      <div class="col-sm-3"></div>
+         <div class="col-sm-6" style="background-color:#fff; height:100%; padding:0px; margin-top:10%; box-shadow:4px 4px 5px #888888; border-radius: 0 100% 100% 0;">
+            <div class="col-sm-7" style="box-shadow:0px 3px 5px #888888; border-radius: 0 20% 20% 0;">
+                  <input type="text"  name="enroll" class="enroll form-control" style="margin-top:27%;"  placeholder="Enter Enrollment Id"/><br>
+                  <input type="password" class="pswd form-control" placeholder="Enter Password"/><br>
+                  <button type="submit"  class="clickChangesPage btn btn-lg btn-default btn-block" data-page='about' style="width:80%; box-shadow:0px 2px 2px #888888;">Login</button>
+                  <div class="col-sm-12" style="height:70px;"></div>
+            </div>
+            <div class="col-sm-4" style="background-color:transparent;margin-top:15%;margin-left:5%; height:100%">
+                  <img  style=" height:160px; width:auto;" src="/images/logo7.png"/>
+            </div>
+         </div>
+   </div>   
+</template>
+
+<template name="about">
+  
+
+     <div class="container-fluid" style="padding:0px;">
+            <div class="row">
+                 <div class="col-sm-2 thenav" style=" height:700px;   background-color:#001a4d;   padding:0px;">
+                         <div class="col-sm-12 thename" style=" height:60px; border-bottom:1px solid #002b80;">
+                              <p class="namethe" id="thenaam" name="thename" style="text-align:center; color:#4d88ff;  margin-top:11%;">{{myname}}</p>
+                         </div> 
+                         
+                         <div class="col-sm-12 thecont" style="height:150px; border-bottom:1px solid #002b80;">
+                          <img  class="img-responsive clickChangesPage" data-page='aboutnew' style="height:100px; margin-left:25%; margin-top:20px;" src="/images/boy2.png"/>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                                 <p class="nametext clickChangesPage" data-page='compare' style="text-align:center; color:#4d88ff; margin-top:11%;">Compare</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                          <p class="nametext clickChangesPage" data-page='predict' style="text-align:center; color:#4d88ff; margin-top:11%;">Grade Prediction</p>
+                         </div>
+                        <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                      <p class="nametext clickChangesPage" style="text-align:center; color:#4d88ff; margin-top:11%;" data-page='explore' >Explore</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                         <p class="nametext clickChangesPage" data-page='work' style="text-align:center;    color:#4d88ff;   margin-top:11%;">My Info</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">       
+                                  <p class="nametext clickChangesPage" data-page='messages' style="text-align:center; color:#4d88ff; margin-top:11%;">Messages</p>
+                         </div> 
+                 </div>
+                <div class="col-sm-10 thehead" style="height:60px; background-color:white; box-shadow:0px 5px 5px #888888;">
+                         <div class="row">
+                              <div class="col-sm-10"></div>
+                               <div class="col-sm-2">
+                                    <p class="logout clickChangesPage" data-page='home' style="text-align:center; margin-top:11%;">Logout</p>
+                               </div>
+                         </div>
+                   </div>
+                   <div class="col-sm-10 thecontainer" style="height:590px; padding:0px;">
+                     <div class="col-sm-12 thetask" style="height:200px; border-bottom:1px solid grey;box-shadow:0px 1px 5px #888888;">
+                                 <div class="row">
+                                       <div class="col-sm-6 task1" style="text-align:center; height:200px;">
+                                              <h4>Upcoming Tasks will be here</h4>
+                                       </div>
+                                       <div class="col-sm-6 task2" style="text-align:center; height:200px;">
+                                             <h4> No Messages to display </h4>
+                                       </div>
+                                       <div class="col-sm-6 task2" style="text-align:center; height:430px;">
+                                            
+                                       </div>
+                                       
+
+                                 </div>
+                          </div>
+                   </div> 
+
+
+            </div> 
+            
+        
+
+</div>
+</template>
+
+
+
+
+
+<template name="messages">
+           
+     <div class="container-fluid" style="padding:0px;">
+            <div class="row">
+                 <div class="col-sm-2 thenav" style=" height:530px;   background-color:#001a4d;   padding:0px;">
+                         <div class="col-sm-12 thename" style=" height:60px; border-bottom:1px solid #002b80;">
+                                    <p class="nametext" name="thename" style="text-align:center;    color:#4d88ff;   margin-top:11%;">Welcome : 141363</p>
+                         </div> 
+                         
+                         <div class="col-sm-12 thecont" style="height:150px; border-bottom:1px solid #002b80;">
+                          <img   class="img-responsive clickChangesPage" data-page='aboutnew' style="height:100px; margin-left:25%; margin-top:20px;" src="/images/boy2.png"/>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                         <p class="nametext clickChangesPage" data-page='compare' style="text-align:center; color:#4d88ff; margin-top:11%;">Compare</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                          <p class="nametext clickChangesPage" data-page='predict' style="text-align:center; color:#4d88ff; margin-top:11%;">Grade Prediction</p>
+                         </div>
+                        <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                      <p class="nametext clickChangesPage" style="text-align:center; color:#4d88ff; margin-top:11%;" data-page='explore' >Explore</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                         <p class="nametext clickChangesPage" data-page='work' style="text-align:center;    color:#4d88ff;   margin-top:11%;">My Info</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">       
+                                  <p class="nametext clickChangesPage" data-page='messages' style="text-align:center; color:#4d88ff; margin-top:11%;">Messages</p>
+                         </div> 
+                 </div>
+                <div class="col-sm-10 thehead" style="height:60px; background-color:white; box-shadow:0px 5px 5px #888888;">
+                         <div class="row">
+                              <div class="col-sm-10"></div>
+                               <div class="col-sm-2">
+                                    <p class="logout clickChangesPage" data-page='home' style="text-align:center; margin-top:11%;">Logout</p>
+                               </div>
+                         </div>
+                   </div>
+                   <div class="col-sm-10 thecontainer" style="height:590px; padding:0px;">
+                             {{> messaging}}
+                             
+                            
+                             
+                   </div> 
+            </div> 
+
+        
+
+</div>
+</template>
+
+
+<template name="compare">
+           
+     <div class="container-fluid" style="padding:0px;">
+            <div class="row">
+                 <div class="col-sm-2 thenav" style=" height:650px;   background-color:#001a4d;   padding:0px;">
+                         <div class="col-sm-12 thename" style=" height:60px; border-bottom:1px solid #002b80;">
+                                    <p class="nametext" name="thename" style="text-align:center;    color:#4d88ff;   margin-top:11%;">Welcome : 141363</p>
+                         </div> 
+                         
+                         <div class="col-sm-12 thecont" style="height:150px; border-bottom:1px solid #002b80;">
+                          <img   class="img-responsive clickChangesPage" data-page='aboutnew' style="height:100px; margin-left:25%; margin-top:20px;" src="/images/boy2.png"/>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                                 <p class="nametext clickChangesPage" data-page='compare' style="text-align:center; color:#4d88ff; margin-top:11%;">Compare</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                          <p class="nametext clickChangesPage" data-page='predict' style="text-align:center; color:#4d88ff; margin-top:11%;">Grade Prediction</p>
+                         </div>
+                        <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                      <p class="nametext clickChangesPage" style="text-align:center; color:#4d88ff; margin-top:11%;" data-page='explore' >Explore</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                         <p class="nametext clickChangesPage" data-page='work' style="text-align:center;    color:#4d88ff;   margin-top:11%;">My Info</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">       
+                                  <p class="nametext clickChangesPage" data-page='messages' style="text-align:center; color:#4d88ff; margin-top:11%;">Messages</p>
+                         </div> 
+                 </div>
+                <div class="col-sm-10 thehead" style="height:60px; background-color:white; box-shadow:0px 5px 5px #888888;">
+                         <div class="row">
+                              <div class="col-sm-10"></div>
+                               <div class="col-sm-2">
+                                    <p class="logout clickChangesPage" data-page='home' style="text-align:center; margin-top:11%;">Logout</p>
+                               </div>
+                         </div>
+                   </div>
+                   <div class="col-sm-10 thecontainer" style="height:590px; padding:0px;">
+                           
+                            {{> comparison}}
+                   </div> 
+            </div> 
+
+        
+
+</div>
+</template>
+
+
+<template name="predict">
+           
+     <div class="container-fluid" style="padding:0px;">
+            <div class="row">
+                 <div class="col-sm-2 thenav" style=" height:1000px;   background-color:#001a4d;   padding:0px;">
+                         <div class="col-sm-12 thename" style=" height:60px; border-bottom:1px solid #002b80;">
+                                    <p class="nametext" name="thename" style="text-align:center;    color:#4d88ff;   margin-top:11%;">Welcome : 141363</p>
+                         </div> 
+                         
+                         <div class="col-sm-12 thecont" style="height:150px; border-bottom:1px solid #002b80;">
+                          <img   class="img-responsive clickChangesPage" data-page='aboutnew' style="height:100px; margin-left:25%; margin-top:20px;" src="/images/boy2.png"/>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                                 <p class="nametext clickChangesPage" data-page='compare' style="text-align:center; color:#4d88ff; margin-top:11%;">Compare</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                          <p class="nametext clickChangesPage" data-page='predict' style="text-align:center; color:#4d88ff; margin-top:11%;">Grade Prediction</p>
+                         </div>
+                        <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                      <p class="nametext clickChangesPage" style="text-align:center; color:#4d88ff; margin-top:11%;" data-page='explore' >Explore</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                         <p class="nametext clickChangesPage" data-page='work' style="text-align:center;    color:#4d88ff;   margin-top:11%;">My Info</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">       
+                                  <p class="nametext clickChangesPage" data-page='messages' style="text-align:center; color:#4d88ff; margin-top:11%;">Messages</p>
+                         </div> 
+                 </div>
+                <div class="col-sm-10 thehead" style="height:60px; background-color:white; box-shadow:0px 5px 5px #888888;">
+                         <div class="row">
+                              <div class="col-sm-10"></div>
+                               <div class="col-sm-2">
+                                    <p class="logout clickChangesPage" data-page='home' style="text-align:center; margin-top:11%;">Logout</p>
+                               </div>
+                         </div>
+                   </div>
+                   <div class="col-sm-10 thecontainer" style="height:590px; padding:0px;">
+                          
+                           {{> prediction}}
+                   </div> 
+            </div> 
+
+        
+
+</div>
+</template>
+
+
+
+<template name="work">
+           
+     <div class="container-fluid" style="padding:0px;">
+            <div class="row">
+                 <div class="col-sm-2 thenav" style=" height:1060px;   background-color:#001a4d;   padding:0px;">
+                         <div class="col-sm-12 thename" style=" height:60px; border-bottom:1px solid #002b80;">
+                                    <p class="nametext" name="thename" style="text-align:center;    color:#4d88ff;   margin-top:11%;">Welcome : 141363</p>
+                         </div> 
+                         
+                         <div class="col-sm-12 thecont" style="height:150px; border-bottom:1px solid #002b80;">
+                          <img   class="img-responsive clickChangesPage" data-page='aboutnew' style="height:100px; margin-left:25%; margin-top:20px;" src="/images/boy2.png"/>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                                 <p class="nametext clickChangesPage" data-page='compare' style="text-align:center; color:#4d88ff; margin-top:11%;">Compare</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                          <p class="nametext clickChangesPage" data-page='predict' style="text-align:center; color:#4d88ff; margin-top:11%;">Grade Prediction</p>
+                         </div>
+                        <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                      <p class="nametext clickChangesPage" style="text-align:center; color:#4d88ff; margin-top:11%;" data-page='explore' >Explore</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                         <p class="nametext clickChangesPage" data-page='work' style="text-align:center;    color:#4d88ff;   margin-top:11%;">My Info</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">       
+                                  <p class="nametext clickChangesPage" data-page='messages' style="text-align:center; color:#4d88ff; margin-top:11%;">Messages</p>
+                         </div> 
+                 </div>
+                <div class="col-sm-10 thehead" style="height:60px; background-color:white; box-shadow:0px 5px 5px #888888;">
+                         <div class="row">
+                              <div class="col-sm-10"></div>
+                               <div class="col-sm-2">
+                                    <p class="logout clickChangesPage" data-page='home' style="text-align:center; margin-top:11%;">Logout</p>
+                               </div>
+                         </div>
+                   </div>
+                   <div class="col-sm-10 task2" style="text-align:center; height:1000px; background-color:transparent;">
+                                            
+                               
+                         
+                         <div class="row" style="padding:0px;">
+                             <div class="col-sm-1"></div>
+                             <div class="col-sm-10" style="margin-top:2%;">
+                                 <div class="col-sm-12" style="height:700px; background-color:#fff; padding:0px;">
+                                 <div class="col-sm-12" style="height:40px; background-color:green; box-shadow:0px 1px 2px #888888; padding:0px;">
+                                      
+                                        
+                                       <div clss="row" style=" padding:0px;">
+                                             <div class="col-sm-6" style=" padding:0px;">
+                                                   <button type="button" data-page='Personal' class="clickChangesPage btn btn-success" style="width:100%;">Personal Info</button>
+                                             </div>
+                                             <div class="col-sm-6" style=" padding:0px;">
+                                                   <button type="button" data-page='resume' class="clickChangesPage btn btn-success" style="width:100%;">Resume</button>
+                                             </div>
+                                       </div>
+                                 </div>
+                                   
+                                 </div>
+                             </div>
+                             <div class="col-sm-1"></div>
+                         </div>                    
+                                      
+                  </div>
+                   
+            </div> 
+
+        
+
+</div>
+</template>
+
+
+<template name="aboutnew">
+  
+
+     <div class="container-fluid" style="padding:0px;">
+            <div class="row">
+                 <div class="col-sm-2 thenav" style=" height:650px;   background-color:#001a4d;   padding:0px;">
+                         <div class="col-sm-12 thename" style=" height:60px; border-bottom:1px solid #002b80;">
+                              <p class="nametext" name="thename" style="text-align:center; color:#4d88ff;  margin-top:11%;">Welcome : 141363</p>
+                         </div> 
+                         
+                         <div class="col-sm-12 thecont" style="height:150px; border-bottom:1px solid #002b80;">
+                          <img   class="img-responsive clickChangesPage" data-page='aboutnew'  style="height:100px; margin-left:25%; margin-top:20px;" src="/images/boy2.png"/>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                                 <p class="nametext clickChangesPage" data-page='compare' style="text-align:center; color:#4d88ff; margin-top:11%;">Compare</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                          <p class="nametext clickChangesPage" data-page='predict' style="text-align:center; color:#4d88ff; margin-top:11%;">Grade Prediction</p>
+                         </div>
+                        <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                      <p class="nametext clickChangesPage" style="text-align:center; color:#4d88ff; margin-top:11%;" data-page='explore' >Explore</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                         <p class="nametext clickChangesPage" data-page='work' style="text-align:center;    color:#4d88ff;   margin-top:11%;">My Info</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">       
+                                  <p class="nametext clickChangesPage" data-page='messages' style="text-align:center; color:#4d88ff; margin-top:11%;">Messages</p>
+                         </div> 
+                 </div>
+                <div class="col-sm-10 thehead" style="height:60px; background-color:white; box-shadow:0px 5px 5px #888888;">
+                         <div class="row">
+                              <div class="col-sm-10"></div>
+                               <div class="col-sm-2">
+                                    <p class="logout clickChangesPage" data-page='home' style="text-align:center; margin-top:11%;">Logout</p>
+                               </div>
+                         </div>
+                   </div>
+                   <div class="col-sm-10 thecontainer" style="height:590px; padding:0px;">
+                     <div class="col-sm-12 thetask" style="height:200px; border-bottom:1px solid grey;box-shadow:0px 1px 5px #888888;">
+                                 <div class="row">
+                                       <div class="col-sm-6 task1" style="text-align:center; height:200px;">
+                                              <h4>Upcoming Tasks will be here</h4>
+                                       </div>
+                                       <div class="col-sm-6 task2" style="text-align:center; height:200px;">
+                                             <h4> No Messages to display </h4>
+                                       </div>
+                                       <div class="col-sm-6 task2" style="text-align:center; height:430px;">
+                                              {{> charts}} 
+                                       </div>
+                                 </div>
+                          </div>
+                   </div> 
+            </div> 
+
+        
+
+</div>
+</template>
+
+<template name="explore">
+       <div class="container-fluid" style="padding:0px;">
+            <div class="row">
+                 <div class="col-sm-2 thenav" style=" height:2700px;   background-color:#001a4d;   padding:0px;">
+                         <div class="col-sm-12 thename" style=" height:60px; border-bottom:1px solid #002b80;">
+                                    <p class="nametext" name="thename" style="text-align:center;    color:#4d88ff;   margin-top:11%;">Welcome : 141363</p>
+                         </div> 
+                         
+                         <div class="col-sm-12 thecont" style="height:150px; border-bottom:1px solid #002b80;">
+                          <img   class="img-responsive clickChangesPage" data-page='aboutnew' style="height:100px; margin-left:25%; margin-top:20px;" src="/images/boy2.png"/>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                                 <p class="nametext clickChangesPage" data-page='compare' style="text-align:center; color:#4d88ff; margin-top:11%;">Compare</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                          <p class="nametext clickChangesPage" data-page='predict'  style="text-align:center; color:#4d88ff; margin-top:11%;">Grade Prediction</p>
+                         </div>
+                        <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                      <p class="nametext clickChangesPage"  style="text-align:center; color:#4d88ff; margin-top:11%;" data-page='explore' >Explore</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                         <p class="nametext clickChangesPage" data-page='work' style="text-align:center;    color:#4d88ff; margin-top:11%;">My Info</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">       
+                                  <p class="nametext clickChangesPage" style="text-align:center; color:#4d88ff; margin-top:11%;" data-page='messages'>Messages</p>
+                         </div> 
+                 </div>
+                <div class="col-sm-10 thehead" style="height:60px; background-color:white; box-shadow:0px 5px 5px #888888;">
+                         <div class="row">
+                              <div class="col-sm-10"></div>
+                               <div class="col-sm-2">
+                                    <p class="logout clickChangesPage" data-page='home' style="text-align:center; margin-top:11%;">Logout</p>
+                               </div>
+                         </div>
+                   </div>
+                  
+                     <div class="row">
+                            {{> charts}} 
+                      </div>
+
+
+            </div> 
+
+        
+
+</div> 
+</template>
+
+
+
+
+
+<template name="charts">
+   <div class="col-sm-7" style="height:470px; background-color:#fff; margin-top:5%; margin-left:10%; padding:0px;">
+       <div class="col-sm-12" style="height:40px; background-color:#e0ebeb; box-shadow:0px 1px 5px #888888;">
+           <h4>CGPA Vs SGPA</h4>
+       </div>
+        <canvas id="myChart" width="600" height="400" style="margin-top:2%; margin-left:5%;"></canvas>
+   </div>
+
+   <div class="col-sm-7" style="height:470px; background-color:#fff; margin-top:2%; margin-left:10%; padding:0px;">
+       <div class="col-sm-12" style="height:40px; background-color:#e0ebeb; box-shadow:0px 1px 5px #888888;">
+          <h4>Current Sem: T1 vs Average of Batch</h4>
+       </div>
+        <canvas id="myChart2" width="700" height="400"></canvas>
+   </div>
+   <div class="col-sm-7" style="height:470px; background-color:#fff; margin-top:2%; margin-left:10%; padding:0px;">
+       <div class="col-sm-12" style="height:40px; background-color:#e0ebeb; box-shadow:0px 1px 5px #888888;">
+          <h4>CGPA Vs SGPA</h4>
+       </div>
+       <canvas id="myChart3" width="400" height="400"></canvas>
+   </div>
+    <div class="col-sm-7" style="height:470px; background-color:#fff; margin-top:2%; margin-left:10%; padding:0px;">
+       <div class="col-sm-12" style="height:40px; background-color:#e0ebeb; box-shadow:0px 1px 5px #888888;">
+          <h4>CGPA Vs SGPA</h4>
+       </div>
+       <canvas id="myChart4" width="400" height="400"></canvas>
+   </div>
+   <div class="col-sm-7" style="height:470px; background-color:#fff; margin-top:2%; margin-left:10%; padding:0px;">
+       <div class="col-sm-12" style="height:40px; background-color:#e0ebeb; box-shadow:0px 1px 5px #888888;">
+          <h4>CGPA Vs SGPA</h4>
+       </div>
+       <canvas id="myChart5" width="400" height="400"></canvas>
+   </div>
+    
+    
+    
+    
+</template>
+
+
+<template name="moreCharts">
+    <canvas id="myChart" width="400" height="400"></canvas>
+</template>
+
+
+<template name="comparison">
+    <div class="col-sm-7" style="height:470px; background-color:#fff; margin-top:5%; margin-left:10%; padding:0px;">
+         <div class="col-sm-12" style="height:40px; background-color:#e0ebeb; box-shadow:0px 1px 5px #888888;">
+           <h4>CGPA Vs SGPA</h4>
+         </div>
+        <canvas id="comparet1" width="600" height="400" style="margin-top:2%; margin-left:5%;"></canvas>
+   </div>
+
+   <div class="col-sm-7" style="height:470px; background-color:#fff; margin-top:2%; margin-left:10%; padding:0px;">
+       <div class="col-sm-12" style="height:40px; background-color:#e0ebeb; box-shadow:0px 1px 5px #888888;">
+          <h4>Current Sem: T1 vs Average of Batch</h4>
+       </div>
+        <canvas id="comparet2" width="700" height="400"></canvas>
+   </div>
+   <div class="col-sm-7" style="height:470px; background-color:#fff; margin-top:2%; margin-left:10%; padding:0px;">
+       <div class="col-sm-12" style="height:40px; background-color:#e0ebeb; box-shadow:0px 1px 5px #888888;">
+          <h4>Current Sem: T1 vs Average of Batch</h4>
+       </div>
+        <canvas id="comparet3" width="700" height="400"></canvas>
+   </div>
+
+   
+    <div class="col-sm-7" style="height:470px; background-color:#fff; margin-top:2%; margin-left:10%; padding:0px;">
+       <div class="col-sm-12" style="height:40px; background-color:#e0ebeb; box-shadow:0px 1px 5px #888888;">
+          <h4>CGPA Vs SGPA</h4>
+       </div>
+       <canvas id="myChart4" width="400" height="400"></canvas>
+   </div>
+   <div class="col-sm-7" style="height:470px; background-color:#fff; margin-top:2%; margin-left:10%; padding:0px;">
+       <div class="col-sm-12" style="height:40px; background-color:#e0ebeb; box-shadow:0px 1px 5px #888888;">
+          <h4>CGPA Vs SGPA</h4>
+       </div>
+       <canvas id="myChart5" width="400" height="400"></canvas>
+   </div>
+    
+</template>
+
+
+<template name="prediction">
+     <div class="container-fluid" style="padding:0px;">
+           <div class="col-sm-12" style="height:150px;box-shadow:0px 2px 2px #888888; padding:0px; background-color:#ffeecc; opacity:0.8;">
+                 <div class="row">
+                       <div class="col-sm-9">
+                              <h1 style="margin-top:10%; margin-left:10%;">Grade Prediction</h1>
+                       </div>
+                       <div class="col-sm-3">
+                               <img   class="img-responsive clickChangesPage" data-page='aboutnew' style="height:100px; margin-left:25%; margin-top:20px;" src="/images/medal3.png"/>
+                       </div>
+                 </div>
+                   
+                   
+           </div>
+           <div class="row">
+                  <div class="col-sm-1"></div>
+                  <div class="col-sm-10" style="height:600px; background-color:#fff; margin-top:5%;">
+                     
+                           <table class="table table-hover">
+                             <thead>
+                                <tr>
+                                  
+                                  <th scope="col">Subject Code</th>
+                                  <th scope="col">Subject Name</th>
+                                  <th scope="col">T1</th>
+                                  <th scope="col">Attendance</th>
+                                  <th scope="col">T2</th>
+                                  <th scope="col">Attendance</th>
+                                  <th scope="col">T3</th>
+                                  <th scope="col">Attendance</th>
+                                  <th scope="col">Average</th>
+                                  <th scope="col">Standard Deviation</th>
+                                  <th scope="col">Expected Grade</th>
+                               </tr>
+                            </thead>
+                             <tbody>
+                               <tr>
+                                 
+                                 <td>c1</td>
+                                 <td>Mathematics 1</td>
+                                 <td>@mdo</td>
+                                 <td>Mark</td>
+                                 <td>Otto</td>
+                                 <td>@mdo</td>
+                                 <td>@mdo</td>
+                                 <td>Mark</td>
+                                 <td>Otto</td>
+                                 <td>@mdo</td>
+                                 <td>@mdo</td>
+                               </tr>
+                               <tr>
+                                 
+                                 <td>c2</td>
+                                 <td>Physics 1</td>
+                                 <td>@mdo</td>
+                                 <td>Mark</td>
+                                 <td>Otto</td>
+                                 <td>@mdo</td>
+                                 <td>@mdo</td>
+                                 <td>Mark</td>
+                                 <td>Otto</td>
+                                 <td>@mdo</td>
+                                 <td>@mdo</td>
+                               </tr>
+                               <tr>
+                                  
+                                  <td>c3</td>
+                                 <td>Electircal Circuit</td>
+                                 <td>@mdo</td>
+                                 <td>Mark</td>
+                                 <td>Otto</td>
+                                 <td>@mdo</td>
+                                 <td>@mdo</td>
+                                 <td>Mark</td>
+                                 <td>Otto</td>
+                                 <td>@mdo</td>
+                                 <td>@mdo</td>
+                               </tr>
+                              </tbody>
+                           </table>
+
+                  </div>
+                  <div class="col-sm-1"></div>
+           </div>
+     </div>
+  
+</template>
+
+
+<template name="messaging">
+       <div class="container-fluid">
+              <div class="row" style="margin-top:150px;">
+                    <div class="col-sm-1"></div>
+                   <form class="messageform">
+                    <div class="col-sm-10" style="background-color:#fff; padding:0px;">
+                         <div class="col-sm-12" style="height:50px; background-color:#e0ebeb; box-shadow:0px 1px 5px #888888;">
+                                
+                         </div>
+                         <div class="col-sm-10" style="height:200px; background-color:#fff; margin-top:2%;">
+                              <textarea class="form-control" name="yourmessage" rows="5" id="comment" placeholder="Write your message here"></textarea>
+                         </div>
+                         <div class="col-sm-2" style="height:100px; background-color:transparent; margin-top:2%;">
+                              <input type="text" placeholder="to whom" name="receiver" class="form-control" id="usr">
+                         </div>
+                         <div class="col-sm-2" style="height:50px;  background-color:transparent;">
+                            <button class="btn success btn-primary" style="width:100%;" type="submit" value="submit">Send</button>
+                         </div>
+                    </div>
+                    </form>
+
+
+                    <div class="col-sm-1"></div>
+              </div>
+
+
+             
+       </div>
+</template>
+
+<template name="messagebox">
+         <div class="container-fluid">
+                <div class="row">
+                      <div class="col-sm-1"></div>
+                      <div class="col-sm-10">
+                           <div class="col-sm-12" name="from" style="height:30px; background-color:#e0ebeb; margin-top:2%;">
+                               
+                           </div>
+                           <div class="col-sm-12" name="foryou" style="height:100px; background-color:#fff;">
+                               {{message}}
+
+
+                           </div>
+                      </div>
+                      <div class="col-sm-1"></div>
+                </div>
+         </div>
+</template>
+
+
+<template name="Personal">
+   <div class="container-fluid" style="padding:0px;">
+            <div class="row">
+                 <div class="col-sm-2 thenav" style=" height:1060px;   background-color:#001a4d;   padding:0px;">
+                         <div class="col-sm-12 thename" style=" height:60px; border-bottom:1px solid #002b80;">
+                                    <p class="nametext" name="thename" style="text-align:center;    color:#4d88ff;   margin-top:11%;">Welcome : 141363</p>
+                         </div> 
+                         
+                         <div class="col-sm-12 thecont" style="height:150px; border-bottom:1px solid #002b80;">
+                          <img   class="img-responsive clickChangesPage" data-page='aboutnew' style="height:100px; margin-left:25%; margin-top:20px;" src="/images/boy2.png"/>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                                 <p class="nametext clickChangesPage" data-page='compare' style="text-align:center; color:#4d88ff; margin-top:11%;">Compare</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                          <p class="nametext clickChangesPage" data-page='predict' style="text-align:center; color:#4d88ff; margin-top:11%;">Grade Prediction</p>
+                         </div>
+                        <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                      <p class="nametext clickChangesPage" style="text-align:center; color:#4d88ff; margin-top:11%;" data-page='explore' >Explore</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                         <p class="nametext clickChangesPage" data-page='work' style="text-align:center;    color:#4d88ff;   margin-top:11%;">My Info</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">       
+                                  <p class="nametext clickChangesPage" data-page='messages' style="text-align:center; color:#4d88ff; margin-top:11%;">Messages</p>
+                         </div> 
+                 </div>
+                <div class="col-sm-10 thehead" style="height:60px; background-color:white; box-shadow:0px 5px 5px #888888;">
+                         <div class="row">
+                              <div class="col-sm-10"></div>
+                               <div class="col-sm-2">
+                                    <p class="logout clickChangesPage" data-page='home' style="text-align:center; margin-top:11%;">Logout</p>
+                               </div>
+                         </div>
+                   </div>
+                   <div class="col-sm-10 task2" style="text-align:center; height:1000px; background-color:transparent;">
+                                            
+                               
+                         
+                         <div class="row" style="padding:0px;">
+                             <div class="col-sm-1"></div>
+                             <div class="col-sm-10" style="margin-top:2%;">
+                                 <div class="col-sm-12" style="height:700px; background-color:#fff; padding:0px;">
+                                 <div class="col-sm-12" style="height:40px; background-color:green; box-shadow:0px 1px 2px #888888; padding:0px;">
+                                      
+                                        
+                                       <div clss="row" style=" padding:0px;">
+                                             <div class="col-sm-6" style=" padding:0px;">
+                                                   <button type="button" data-page='Personal' class="clickChangesPage btn btn-success" style="width:100%;">Personal Info</button>
+                                             </div>
+                                             <div class="col-sm-6" style=" padding:0px;">
+                                                   <button type="button" data-page='resume' class="clickChangesPage btn btn-success" style="width:100%;">Resume</button>
+                                             </div>
+                                       </div>
+                                 </div>
+                                 <div class="row">
+                                         <div class="col-sm-1"></div>
+                                          <div class="col-sm-10">
+                                            <table class="table table-hover" style="font-size:15px;">
+ 
+  <tbody>
+    <tr>
+      <th scope="row"></th>
+      <td>Name</td>
+      <td>{{thename}}</td>
+       
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td>Father Name</td>
+      <td>{{fathername}}</td>
+      
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td>Email</td>
+      <td>{{email}}</td>
+      
+    </tr>
+      <tr>
+      <th scope="row"></th>
+      <td>Phone</td>
+      <td>{{phone}}</td>
+      
+    </tr>
+  </tbody>
+</table>
+                                          </div>
+                                          <div class="col-sm-1"></div>
+                                  </div>
+
+                                 </div>
+                             </div>
+                             <div class="col-sm-1"></div>
+                         </div>                    
+                                      
+                  </div>
+                   
+            </div> 
+
+        
+
+</div>
+</template>
+
+<template name="resume">
+   <div class="container-fluid" style="padding:0px;">
+            <div class="row">
+                 <div class="col-sm-2 thenav" style=" height:1060px;   background-color:#001a4d;   padding:0px;">
+                         <div class="col-sm-12 thename" style=" height:60px; border-bottom:1px solid #002b80;">
+                                    <p class="nametext" name="thename" style="text-align:center;    color:#4d88ff;   margin-top:11%;">Welcome : 141363</p>
+                         </div> 
+                         
+                         <div class="col-sm-12 thecont" style="height:150px; border-bottom:1px solid #002b80;">
+                          <img   class="img-responsive clickChangesPage" data-page='aboutnew' style="height:100px; margin-left:25%; margin-top:20px;" src="/images/boy2.png"/>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                                 <p class="nametext clickChangesPage" data-page='compare' style="text-align:center; color:#4d88ff; margin-top:11%;">Compare</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                          <p class="nametext clickChangesPage" data-page='predict' style="text-align:center; color:#4d88ff; margin-top:11%;">Grade Prediction</p>
+                         </div>
+                        <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                      <p class="nametext clickChangesPage" style="text-align:center; color:#4d88ff; margin-top:11%;" data-page='explore' >Explore</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">
+                         <p class="nametext clickChangesPage" data-page='work' style="text-align:center;    color:#4d88ff;   margin-top:11%;">My Info</p>
+                         </div>
+                         <div class="col-sm-12 thecont" style="height:60px; border-bottom:1px solid #002b80;">       
+                                  <p class="nametext clickChangesPage" data-page='messages' style="text-align:center; color:#4d88ff; margin-top:11%;">Messages</p>
+                         </div> 
+                 </div>
+                <div class="col-sm-10 thehead" style="height:60px; background-color:white; box-shadow:0px 5px 5px #888888;">
+                         <div class="row">
+                              <div class="col-sm-10"></div>
+                               <div class="col-sm-2">
+                                    <p class="logout clickChangesPage" data-page='home' style="text-align:center; margin-top:11%;">Logout</p>
+                               </div>
+                         </div>
+                   </div>
+                   <div class="col-sm-10 task2" style="text-align:center; height:1000px; background-color:transparent;">
+                                            
+                               
+                         
+                         <div class="row" style="padding:0px;">
+                             <div class="col-sm-1"></div>
+                             <div class="col-sm-10" style="margin-top:2%;">
+                                 <div class="col-sm-12" style="height:700px; background-color:#fff; padding:0px;">
+                                 <div class="col-sm-12" style="height:40px; background-color:green; box-shadow:0px 1px 2px #888888; padding:0px;">
+                                      
+                                        
+                                       <div clss="row" style=" padding:0px;">
+                                             <div class="col-sm-6" style=" padding:0px;">
+                                                   <button type="button" data-page='Personal' class="clickChangesPage btn btn-success" style="width:100%;">Personal Info</button>
+                                             </div>
+                                             <div class="col-sm-6" style=" padding:0px;">
+                                                   <button type="button" data-page='resume' class="clickChangesPage btn btn-success" style="width:100%;">Resume</button>
+                                             </div>
+                                       </div>
+                                 </div>
+                                       <h1>Resume will come here</h1>
+                                 </div>
+                             </div>
+                             <div class="col-sm-1"></div>
+                         </div>                    
+                                      
+                  </div>
+                   
+            </div> 
+
+        
+
+</div>
+</template>

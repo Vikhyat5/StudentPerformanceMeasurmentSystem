@@ -1,0 +1,8 @@
+<div style="margin-top: 80px;  margin-bottom: 80px;">
+  <div  style=" max-width: 380px; padding: 15px 35px 45px; margin: 0 auto; background-color: #fff; border: 1px solid rgba(0,0,0,0.1); box-shadow:0px 5px 5px #888888; ">
+    <input type="text"  name="enroll" class="enroll form-control" style=" position: relative; font-size: 16px;  height: auto;   padding: 10px;  width:100%; margin-top:20px;" placeholder="Enter Enroll" />
+   <input type="password" style=" position: relative; font-size: 16px;  height: auto;   padding: 10px; width:100%; margin-top:20px;" name="pswd"  class="pswd form-control" placeholder="Enter Password" />
+ <button type="submit"  class="clickChangesPage btn btn-lg btn-primary btn-block" data-page='about'>Login</button>
+            
+   </div> 
+   </div> 

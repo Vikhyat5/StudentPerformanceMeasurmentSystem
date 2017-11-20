@@ -1,0 +1,134 @@
+/* CSS declarations go here */
+/* CSS declarations go here */
+@import "bourbon";
+
+body {
+	
+	background: #eee !important;	
+
+/*
+background: #E0EAFC; 
+background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC); 
+background: linear-gradient(to right, #CFDEF3, #E0EAFC); 
+*/
+}
+ 
+    /* The Login Form */
+
+.wrapper {	
+	margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);  
+}
+
+.form-signin-heading,
+	.checkbox {
+	  margin-bottom: 30px;
+	}
+
+	.checkbox {
+	  font-weight: normal;
+	}
+
+	.form-control {
+	  position: relative;
+	  font-size: 16px;
+	  height: auto;
+	  padding: 10px;
+	  
+	}
+
+	input[type="text"] {
+	  margin-bottom: -1px;
+	  border-bottom-left-radius: 0;
+	  border-bottom-right-radius: 0;
+	}
+
+	input[type="password"] {
+	  margin-bottom: 20px;
+	  border-top-left-radius: 0;
+	  border-top-right-radius: 0;
+	}
+}
+
+
+   /* The Dash board */
+
+.thehead
+		{
+			height:60px;
+			background-color:white;
+			box-shadow:0px 5px 5px #888888;
+
+		}
+		.thenav
+		{    
+			  height:650px;
+			 background-color:#001a4d;
+			 padding:0px;
+			
+
+		}
+		.thename
+		{
+			  height:60px;
+			  //background-color:green;
+			  border-bottom:1px solid #002b80;
+
+		}
+		.nametext
+		{
+			text-align:center;
+			 color:#4d88ff;
+			  margin-top:11%;
+		}
+        .logout
+        {
+        	text-align:center;
+        	 margin-top:11%;
+        }
+         .thecontainer
+         {
+         	height:590px;
+         	 
+         	 padding:0px;
+         }
+         
+         .thetask
+         {
+         	height:200px;
+         	border-bottom:1px solid grey;
+         	box-shadow:0px 1px 5px #888888;
+         }
+         .task1
+         {
+              text-align:center;
+        	 height:200px;
+         }
+         .task2
+         {
+             text-align:center;
+        	 height:200px;
+        	 
+         }
+         .task2 h4
+         {
+         	margin-top:11%;
+         }
+         .thespace
+         {
+         	height:110px;
+         }
+         .thecont
+         {
+         	 height:60px;
+			  
+			  border-bottom:1px solid #002b80;
+         }
