@@ -18,3 +18,7 @@ Platform also provide teacher to share information with student through portal
 
 ![screenshot 412](https://user-images.githubusercontent.com/24519869/39533548-f7c35740-4e4c-11e8-98eb-e4fe0bcf7fd6.png)
 
+
+![screenshot 411](https://user-images.githubusercontent.com/24519869/39533794-9f13ac0c-4e4d-11e8-94f6-78829e3a360a.png)
+)
+
