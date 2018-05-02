@@ -4,7 +4,8 @@ Performance measurement system web application built using Meteor JS, Chart.js, 
 the portal provides graphical comparisons between current login student marks scored in particular subject to average of class thus uses DATA Analytics to predict future grades after every mid semester test and also analyse areas to work on to score good next time
 Platform also provide teacher to share information with student through portal
 
-![screenshot 113](https://user-images.githubusercontent.com/24519869/33026569-bd6392ea-ce36-11e7-9b63-f0dba36c35ac.png)
-![screenshot 112](https://user-images.githubusercontent.com/24519869/33026578-c317be82-ce36-11e7-97b6-724e9f23165a.png)
-![screenshot 91](https://user-images.githubusercontent.com/24519869/33026583-c71e57fc-ce36-11e7-8916-3a7f7055d9e1.png)
-![screenshot 97](https://user-images.githubusercontent.com/24519869/33026588-ca9c25e4-ce36-11e7-8d98-594bf44f3bf5.png)
+![screenshot 421](https://user-images.githubusercontent.com/24519869/39533357-73b8d722-4e4c-11e8-9355-fd0d92aa3514.png)
+![screenshot 423](https://user-images.githubusercontent.com/24519869/39533358-741daabc-4e4c-11e8-80ae-1671f79606df.png)
+![screenshot 424](https://user-images.githubusercontent.com/24519869/39533359-747ae8a8-4e4c-11e8-999c-b5764dac700f.png)
+![screenshot 413](https://user-images.githubusercontent.com/24519869/39533360-74cf1824-4e4c-11e8-941a-a74bfbf84d8e.png)
+![screenshot 414](https://user-images.githubusercontent.com/24519869/39533361-75283210-4e4c-11e8-8404-ccbfe9551569.png)
