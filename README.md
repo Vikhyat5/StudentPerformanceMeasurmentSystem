@@ -21,7 +21,7 @@ Platform also provide teacher to share information with student through portal
    <li>Bootstrap</li>
    <li>CSS3</li>
   <li>Javascript</li>
-  
+  <li>Mongo DB</li>
 </ol>
 <hr>
 
