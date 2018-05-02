@@ -12,7 +12,17 @@ Platform also provide teacher to share information with student through portal
    <li style="color:yellow;">Digital Resume</li>
   <li style="color:green;">Grade Prediction</li>
 </ol>
-
+<hr>
+<h3>Technology Used</h3>
+<ol>
+  <li >Meteor JS</li>
+   <li>HTML5</li>
+   <li>Bootstrap</li>
+   <li>CSS3</li>
+  <li>Javascript</li>
+  <li>java</li>
+</ol>
+<hr>
 
 
 ![screenshot 413](https://user-images.githubusercontent.com/24519869/39533360-74cf1824-4e4c-11e8-941a-a74bfbf84d8e.png)
