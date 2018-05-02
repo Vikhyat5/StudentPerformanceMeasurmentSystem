@@ -16,11 +16,12 @@ Platform also provide teacher to share information with student through portal
 <h3>Technology Used</h3>
 <ol>
   <li >Meteor JS</li>
+  <li>Chart.js</li>
    <li>HTML5</li>
    <li>Bootstrap</li>
    <li>CSS3</li>
   <li>Javascript</li>
-  <li>java</li>
+  
 </ol>
 <hr>
 
