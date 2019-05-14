@@ -1,6 +1,8 @@
 # Student Performance Measurment System
 
 Performance measurement system web application built using Meteor JS, Chart.js, MongoDB 
+- ![#c5f015](https://placehold.it/15/c5f015/000000?text=
+Performance measurement system web application built using Meteor JS, Chart.js, MongoDB ) `#c5f015`
 the portal provides graphical comparisons between current login student marks scored in particular subject to average of class thus uses DATA Analytics to predict future grades after every mid semester test and also analyse areas to work on to score good next time
 Platform also provide teacher to share information with student through portal
 
